@@ -31,8 +31,13 @@
 *.out
 *.app
 
-# Misc
-.vscode/
+# Build
 build/
+Build/
 Release/
 Debug/
+
+# Misc
+.vscode/
+scratch.cpp
+compile_flags.txt
