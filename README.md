@@ -26,5 +26,5 @@ make run_benchmarks
 ```
 
 ## Classes
-- `spinlock_mutex`: a fast mutex class
-- `thread`: a nameable, core-assignable thread class
+- `spinlock_mutex`: a fast mutex class using std::atomic_flag
+- `thread`: a nameable, CPU core-assignable thread class
