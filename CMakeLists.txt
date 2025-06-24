@@ -10,6 +10,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
+add_compile_options(-Wall -Wextra -Wpedantic)
+
 if("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
     message(STATUS "Building Release configuration")
     set(BUILD_DEBUG_CONFIG OFF)
