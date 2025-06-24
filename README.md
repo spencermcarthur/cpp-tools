@@ -1,5 +1,9 @@
 # C++ Tooling Library
 
+Requirements:
+- C++20
+- Linux OS
+
 ## Dependencies
 - libpthread
 - libgtest (unit tests only)
