@@ -6,6 +6,7 @@
 
 namespace tools {
 
+// Fast spinlock mutex
 class spinlock_mutex {
     std::atomic_flag flag_{ATOMIC_FLAG_INIT};
 
