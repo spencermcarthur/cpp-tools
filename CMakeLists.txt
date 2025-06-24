@@ -24,3 +24,8 @@ endif()
 add_subdirectory(bin)
 add_subdirectory(lib)
 add_subdirectory(tests)
+
+install(TARGETS cpptools 
+    PUBLIC_HEADER
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/include/cpptools
+)
