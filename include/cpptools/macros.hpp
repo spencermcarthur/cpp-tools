@@ -1,11 +1,11 @@
 #pragma once
 
-#define NO_COPY_OR_MOVE(CLASS_NAME)                     \
-    CLASS_NAME(const CLASS_NAME &) = delete;            \
-    CLASS_NAME &operator=(const CLASS_NAME &) = delete; \
-    CLASS_NAME(CLASS_NAME &&) = delete;                 \
-    CLASS_NAME &operator=(CLASS_NAME &&) = delete
+#define CPPTOOLS_NO_COPY_OR_MOVE(CLASS)       \
+    CLASS(const CLASS &) = delete;            \
+    CLASS &operator=(const CLASS &) = delete; \
+    CLASS(CLASS &&) = delete;                 \
+    CLASS &operator=(CLASS &&) = delete
 
-#define NO_COPY(CLASS_NAME)                  \
-    CLASS_NAME(const CLASS_NAME &) = delete; \
-    CLASS_NAME &operator=(const CLASS_NAME &) = delete
+#define CPPTOOLS_NO_COPY(CLASS)    \
+    CLASS(const CLASS &) = delete; \
+    CLASS &operator=(const CLASS &) = delete

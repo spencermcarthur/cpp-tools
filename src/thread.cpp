@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-namespace tools {
+namespace cpptools {
 
 thread::thread(thread&& other) noexcept : core_(other.core_) {
     other.core_ = -1;
@@ -41,4 +41,4 @@ bool thread::set_core(int core) noexcept {
     return false;
 }
 
-}  // namespace tools
+}  // namespace cpptools

@@ -14,7 +14,7 @@ void bm_std_mutex(benchmark::State& s) {
 BENCHMARK(bm_std_mutex);
 
 void bm_spinlock_mutex(benchmark::State& s) {
-    using tools::spinlock_mutex;
+    using cpptools::spinlock_mutex;
 
     spinlock_mutex m;
     for (auto _ : s) {

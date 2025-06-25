@@ -7,23 +7,22 @@
 
 #include "cpptools/macros.hpp"
 
-namespace tools {
+namespace cpptools {
 
 // Nameable, pinnable thread
 class thread : public std::thread {
     static constexpr size_t MAX_NAME_LEN = 15;
 
 public:
-    thread() noexcept : std::thread() {}
+    thread() noexcept = default;
+    ~thread() = default;
 
     thread(thread&& other) noexcept;
 
     template <class F, class... Args>
     explicit thread(F&& f, Args&&... args) : std::thread(f, args...) {}
 
-    ~thread() = default;
-
-    NO_COPY(thread);
+    CPPTOOLS_NO_COPY(thread);
 
     bool set_name(const std::string_view&) noexcept;
     std::string_view name() const { return name_; }
@@ -36,4 +35,4 @@ private:
     int core_{-1};
 };
 
-}  // namespace tools
+}  // namespace cpptools

@@ -2,7 +2,7 @@
 
 #include <atomic>
 
-namespace tools {
+namespace cpptools {
 
 void spinlock_mutex::lock() {
     // Tries to set flag until test_and_set() returns false, i.e. the mutex was
@@ -23,4 +23,4 @@ void spinlock_mutex::unlock() noexcept {
     flag_.clear(std::memory_order_release);
 }
 
-}  // namespace tools
+}  // namespace cpptools

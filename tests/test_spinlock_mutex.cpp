@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-using tools::spinlock_mutex;
+using cpptools::spinlock_mutex;
 
 TEST(spinlock_mutex, constructor) { ASSERT_NO_FATAL_FAILURE(spinlock_mutex{}); }
 

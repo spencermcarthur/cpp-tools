@@ -5,7 +5,7 @@
 
 #include "cpptools/thread.hpp"
 
-using namespace tools;
+using cpptools::thread;
 
 TEST(thread, default_constructor) {
     EXPECT_NO_THROW(thread{});
