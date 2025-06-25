@@ -9,3 +9,7 @@
 #define CPPTOOLS_NO_COPY(CLASS)    \
     CLASS(const CLASS &) = delete; \
     CLASS &operator=(const CLASS &) = delete
+
+#ifndef CPPTOOLS_CACHELINE_SIZE
+#define CPPTOOLS_CACHELINE_SIZE 64
+#endif
