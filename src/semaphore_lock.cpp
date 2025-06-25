@@ -24,8 +24,8 @@ std::system_error make_sys_err(const int err, const std::string_view what) {
 semaphore_lock::semaphore_lock(std::string_view name) {
     if (name.empty() || name.length() > MAX_SEMAPHORE_NAME_LEN) {
         SCESV fmt =
-            "Semaphore name \"{}\" of length {} is invalid: length must be [1, "
-            "{})";
+            "Semaphore name \"{}\" of length {} is invalid: length must be in "
+            "range [1, {}]";
         throw std::length_error(
             std::format(fmt, name, name.length(), MAX_SEMAPHORE_NAME_LEN));
     }
